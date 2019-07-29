@@ -51,10 +51,22 @@
             a.style.color = colors[Math.min(Math.floor(index/10), 6)];
           }
           let aff = info.affiliation;
-          let targetAffs = ["Google", "Apple", "Microsoft", "Facebook", "Amazon", "DeepMind", "Mila", "Preferred"];
-          for(let target of targetAffs){
-            if (aff.indexOf(target)>=0){
-              a.innerHTML += '<sup><span style="background-color: red; color: white">' + target + '</span></sup>';
+          let targetAffs = {
+            "Google":"",
+            "Apple":"",
+            "Microsoft":"",
+            "Facebook":"",
+            "Amazon":"",
+            "DeepMind":"",
+            "Mila":"",
+            "Preferred":"",
+            "University of Tokyo":"UTokyo",
+          };
+          for(let target in targetAffs){
+            if (aff.indexOf(target) >= 0){
+              let dispName = targetAffs[target];
+              if (dispName.length === 0) dispName = target;
+              a.innerHTML += '<sup><span style="background-color: red; color: white">' + dispName + '</span></sup>';
             }
           }
         }
