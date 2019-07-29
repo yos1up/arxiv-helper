@@ -2,6 +2,11 @@
 
 arXiv の論文を快適に読めるようになる UserScript
 
+- 著者の h-index と所属の表示
+
+
+<img src="./scrshot.png" width=640>
+
 ## Usage
 
 1. Chrome Extension の Tampermonkey をインストール
