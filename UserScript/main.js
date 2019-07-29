@@ -62,6 +62,7 @@
             "Preferred":"",
             "UTokyo":"",
             "University of Tokyo":"UTokyo",
+            "Stanford":"",
             "Karakuri":""
           };
           for(let target in targetAffs){
