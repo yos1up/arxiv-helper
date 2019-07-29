@@ -60,6 +60,7 @@
             "DeepMind":"",
             "Mila":"",
             "Preferred":"",
+            "UTokyo":"",
             "University of Tokyo":"UTokyo",
             "Karakuri":""
           };
