@@ -61,6 +61,7 @@
             "Mila":"",
             "Preferred":"",
             "University of Tokyo":"UTokyo",
+            "Karakuri":""
           };
           for(let target in targetAffs){
             if (aff.indexOf(target) >= 0){
