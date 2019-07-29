@@ -1,6 +1,6 @@
 # arxiv-helper
 
-arXiv の論文を快適に読めるようになる extension
+arXiv の論文を快適に読めるようになる UserScript
 
 ## Usage
 
@@ -9,3 +9,9 @@ arXiv の論文を快適に読めるようになる extension
 2. `./UserScript/main.js` を Tampermonkey に追加する
 
 3. `https://arxiv.org/list/stat.ML/` で始まるページ（例えば `https://arxiv.org/list/stat.ML/recent` ）で動作します．ページを表示してから h-index 値などが表示されるまで 30 秒程度時間がかかる場合があります．
+
+## 内部構成
+
+```
+client <-------> GAS <-------> Spreadsheet
+```
