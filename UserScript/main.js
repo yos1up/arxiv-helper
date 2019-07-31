@@ -4,10 +4,23 @@
 // @version      0.1
 // @description  arXiv helper
 // @author       yos1up, txmy
-// @match        https://arxiv.org/list/stat.ML/*
+// @match        https://arxiv.org/list/*
 // @grant        none
 // ==/UserScript==
 
+/* Google 検索ボタンの追加 */
+(function() {
+  let idList = document.getElementsByClassName("list-identifier");
+  let titleList = document.getElementsByClassName("list-title");
+  for(let i=0;i<titleList.length;i++){
+    var paperID = idList[i].innerText.substr(6, 10); // 論文 ID
+    var title = titleList[i].innerText;
+    var uri = encodeURI('https://www.google.com/search?q="' + title + '" or "' + paperID + '"&lr=lang_ja');
+    titleList[i].innerHTML += '<a href="' + uri + '" target="_blank">🔍</a>';
+  }
+})();
+
+/* 著者情報の追加 */
 (function() {
   let authorAnchors = [];
   let authors = new Set();
@@ -58,12 +71,13 @@
             "Facebook":"",
             "Amazon":"",
             "DeepMind":"",
+            "IBM":"",
+            "Karakuri":"",
             "Mila":"",
             "Preferred":"",
             "UTokyo":"",
             "University of Tokyo":"UTokyo",
             "Stanford":"",
-            "Karakuri":""
           };
           for(let target in targetAffs){
             if (aff.indexOf(target) >= 0){
