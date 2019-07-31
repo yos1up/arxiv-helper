@@ -25,7 +25,7 @@
   if (authors.length == 0) return;
 
   // h-index　を取得
-  let uri = "https://script.google.com/macros/s/AKfycbw301yDI-0JvTFBEeHjARR-eWO0r7IyJujdOkE0y6WmQEbb6-ZS/exec?names=" + authors;
+  let uri = "https://script.google.com/macros/s/AKfycbzjymJLshTAX8RopL9CTbdiNm1NsthlonLOOIFRLsj_aDcvVFk/exec?names=" + authors;
   let xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function(){
     var READYSTATE_COMPLETED = 4;

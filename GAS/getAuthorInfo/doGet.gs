@@ -45,7 +45,7 @@ function doGet(e) {
     for(var i=0;i<names.length;i++) names[i] = names[i].trim(); // 前後スペースの削除
     
     // シートデータ取得
-    var file = SpreadsheetApp.openById(SPREADSHEET_ID);
+    var file = SpreadsheetApp.getActiveSpreadsheet();
     var sheet = file.getSheetByName("h-index");
     /* sheet の構成            
             | name | nameFound | userID | hIndex | updatedAt | affiliation |
