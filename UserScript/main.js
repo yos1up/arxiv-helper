@@ -6,6 +6,8 @@
 // @author       yos1up, txmy
 // @match        https://arxiv.org/list/*
 // @grant        none
+// @updateURL    https://raw.githubusercontent.com/yos1up/arxiv-helper/master/UserScript/main.js
+// @downloadURL  https://raw.githubusercontent.com/yos1up/arxiv-helper/master/UserScript/main.js
 // ==/UserScript==
 
 /* Google 検索ボタンの追加 */
